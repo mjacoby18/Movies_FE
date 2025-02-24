@@ -45,6 +45,12 @@
                           <input v-model="movie.rating" type="text" class="form-control-sm form-control">
                         </div>
                       </div>
+                      <div class="form-group row justify-content-around py-2">
+                        <label class="col-5">Director</label>
+                        <div class="col col-7">
+                          <input v-model="movie.director" type="text" class="form-control-sm form-control">
+                        </div>
+                      </div>
                       <div class="row justify-content-around">
                         <div v-if="!isUpdate" type="button" class="btn btn-primary col-4" @click="createMovie">Save</div>
                         <div v-if="isUpdate" type="button" class="btn btn-primary col-4" @click="updateMovie">Update</div>

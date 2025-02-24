@@ -49,6 +49,7 @@
                         <p><b>Description:</b>{{ movie.description }}</p>
                         <p><b>Year:</b> {{ movie.year }}</p>
                         <p><b>Rating:</b> {{ movie.rating }}</p>
+                        <p><b>Director:</b> {{ movie.director }}</p>
                         <div v-if="this.authenticated === 'true'" class="btn-group">
                             <button @click="updateMovie(movie)" style="background-color: transparent; padding: 5;">
                                 <font-awesome-icon icon="pencil"/>
@@ -73,6 +74,7 @@
                         <th scope="col">Description</th>
                         <th scope="col">Year</th>
                         <th scope="col">Rating</th>
+                        <th scope="col">Director</th>
                         <th v-if="this.authenticated === 'true'" scope="col">Update</th>
                         <th v-if="this.authenticated === 'true'" scope="col">Delete</th>
                     </tr>
@@ -83,6 +85,7 @@
                         <td>{{ movie.description }}</td>
                         <td>{{ movie.year }}</td>
                         <td>{{ movie.rating }}</td>
+                        <td>{{ movie.director }}</td>
 
                         <td v-if="this.authenticated === 'true'" @click="updateMovie(movie)">
                             <button style="background-color: transparent; padding: 0;">
@@ -126,6 +129,7 @@
                     {text: 'Description', sortable: false, align: 'left',},
                     {text: 'Year', sortable: false, align: 'left',},
                     {text: 'Rating', sortable: false, align: 'left',},
+                    {text: 'Director', sortable: false, align: 'left',},
                     {text: 'Update', sortable: false, align: 'center',},
                     {text: 'Delete', sortable: false, align: 'center',},
                 ],
